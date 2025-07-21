@@ -1,10 +1,10 @@
- /** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 export default {
-   content: ["./src/**/*.{html,js}"],
-   theme: {
-     extend: {},
-   },
-    // eslint-disable-next-line no-undef
-    plugins: [ require('daisyui'),
+  content: ["./src/**/*.{js,jsx,ts,tsx}"], // <-- this is the fix
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    require("daisyui"),
   ],
- }
+};
