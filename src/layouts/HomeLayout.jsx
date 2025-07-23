@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import LatestNews from '../components/LatestNews';
 import Navbar from '../components/Navbar';
 import LeftNavbar from '../components/layout-components/LeftNavbar';
+import RightNavbar from '../components/layout-components/RightNavbar';
 
 const HomeLayout = () => {
 return <div className='font-poppins'>
@@ -20,7 +21,9 @@ return <div className='font-poppins'>
         <LeftNavbar></LeftNavbar>
       </aside>
       <section className='col-span-6'>Main Content</section>
-      <aside className='col-span-3'>Right Navbar</aside>
+      <aside className='col-span-3'>
+        <RightNavbar></RightNavbar>
+      </aside>
     </main>
 </div>
 };
