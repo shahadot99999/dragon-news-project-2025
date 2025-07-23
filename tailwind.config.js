@@ -2,7 +2,11 @@
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"], // <-- this is the fix
   theme: {
-    extend: {},
+    extend: {
+      fontFamily : {
+        poppins: ["Poppins", "serif"],
+      }
+    },
   },
   plugins: [
     require("daisyui"),
