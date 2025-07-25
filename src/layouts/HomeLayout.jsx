@@ -21,7 +21,7 @@ return <div className='font-poppins'>
       <aside className='left col-span-3'>
         <LeftNavbar></LeftNavbar>
       </aside>
-      <section className='col-span-6'>Main Content
+      <section className='col-span-6'>
         <Outlet></Outlet>
       </section>
 
