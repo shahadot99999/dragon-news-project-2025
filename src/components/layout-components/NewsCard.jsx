@@ -1,4 +1,5 @@
 import { FaEye } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
   const {
@@ -54,9 +55,9 @@ const NewsCard = ({ news }) => {
           {details?.length > 200
             ? `${details.slice(0, 200)}...`
             : details || "No details available."}
-          <span className="text-blue-500 font-medium ml-1 cursor-pointer">
+          <Link to={`/news/${news._id}`} className="text-blue-500 font-medium ml-1 cursor-pointer">
             Read More
-          </span>
+          </Link>
         </p>
       </div>
 
