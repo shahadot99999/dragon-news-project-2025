@@ -1,11 +1,17 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
  
 const Login = () => {
 
     const {userLogin, setUser}= useContext(AuthContext)
+
+    const [error, setError]= useState({});
+      const location = useLocation();
+      const navigate = useNavigate();
+      console.log(location);
+
 
     const handleSubmit= (e)=>{
         e.preventDefault();
@@ -17,10 +23,11 @@ const Login = () => {
         .then(result =>{
             const user = result.user;
             setUser(user);
+            navigate(location?.state ? location.state : "/");
         })
-            .catch((error) => {
+            .catch((err) => {
                 
-               alert(error.code);
+               setError({...error, login:err.code});
                
             });
     }
@@ -38,17 +45,33 @@ const Login = () => {
                             name="email"
                             className="input input-bordered" placeholder="Email" required />
                         </div>
+
+
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password"
-                            name="password"
-                            className="input input-bordered" placeholder="Password" required />
+                            <input
+                                type="password"
+                                name="password"
+                                className="input input-bordered"
+                                placeholder="Password"
+                                required
+                            />
+
+                            {/* Error message appears first */}
+                            {error.login && (
+                                <div className="text-sm text-red-600 mb-1">
+                                    {error.login}
+                                </div>
+                            )}
+
+                            {/* Forgot password appears below error */}
                             <div className="label">
                                 <a className="link link-hover label-text-alt">Forgot password?</a>
                             </div>
                         </div>
+                    
                         <button type="submit" className="btn btn-neutral mt-4 w-full">Login</button>
                     </form>
                     <p className="text-center font-semibold">
