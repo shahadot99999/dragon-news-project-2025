@@ -2,7 +2,7 @@ import moment from "moment";
 import logo from "../assets/logo.png";
 
 const Header = () => {
-   console.log(import.meta.env.VITE_a);
+//    console.log(import.meta.env.VITE_a);
     return (
         <div className=" flex flex-col justify-center items-center 
         gap-4 py-4 ">
