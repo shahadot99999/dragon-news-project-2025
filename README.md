@@ -1,12 +1,51 @@
-# React + Vite
+# 🐉 Dragon News
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive news website built with React and Firebase. Features user authentication, category-based news, protected routes, and real-time data.
 
-Currently, two official plugins are available:
+🔗 [Live Site](https://dragon-news-2025.web.app)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+🔐 Auth & Context
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Firebase Email/Password auth
+
+onAuthStateChanged tracks login/logout state
+
+AuthContext provides global user state
+
+Protected routes via <PrivateRoute />
+
+
+
+📦 Features
+
+
+Register/Login (styled from Figma)
+
+Update profile info after signup
+
+Redirect after login/logout
+
+News by category with dynamic routing
+
+News details page with loader
+
+Moment.js for date format
+
+Fast Marquee for headline scroll
+
+Firebase Hosting + .env config
+
+
+🧠 Tools Used
+
+React Router DOM
+
+Firebase Auth
+
+Moment.js
+
+React Fast Marquee
+
+Tailwind, Daisyui,
